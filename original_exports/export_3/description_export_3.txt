@@ -1,0 +1,9 @@
+Le fichier .ipynb est un notebook Jupyter qui peut être ouver via l'application Jupyter disponible via WinPython.
+Le Jupyter notebook contient l'ensemble du code ayant servi à générer le résultat. Je pense que les variables sont assez claire.
+Dans les faits c'est un simple fichier Json.
+
+Il contient un ensemble de régressions et de statistiques descriptives cherchant le lien entre l'optimisation fiscale et l'évolution du statut matrimonial.
+
+Merci d'avance,
+
+Adrien Pacifico
