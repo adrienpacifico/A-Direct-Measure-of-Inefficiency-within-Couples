@@ -1,0 +1,32 @@
+Libname EDP "\\casd.fr\casdfs\Projets\IMPTEMP\Data\EDP_EDP_2015";
+
+
+
+%MACRO Convert2CSV(Libname);
+	DATA MEMBERS;
+	SET SASHELP.VMEMBER(WHERE=(LIBNAME = "&Libname"));
+	 RETAIN OBS 0;
+	 OBS = OBS+1;
+	 KEEP MEMNAME OBS;
+	RUN;
+	PROC SQL;
+	SELECT MIN(OBS) INTO :MIN
+	FROM MEMBERS;
+	QUIT;
+	PROC SQL;
+	SELECT MAX(OBS) INTO :MAX
+	FROM MEMBERS;
+	QUIT;
+	%LOCAL D;
+	 %DO D = &MIN %TO &MAX;
+	  PROC SQL;
+	  SELECT COMPRESS(MEMNAME) INTO: Table
+	   FROM MEMBERS
+	   WHERE OBS=&D;
+	QUIT;
+	PROC EXPORT  DBMS=CSV DATA=&Libname..&Table
+	OUTFILE="C:\Users\IMPTEMP_A_PACIFIC\Desktop\Cohabitant_project(EDP_2015)\Data\csv\&Table..CSV";
+	RUN;
+   %END;
+%MEND;
+%Convert2CSV(EDP)
