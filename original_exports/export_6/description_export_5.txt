@@ -1,0 +1,9 @@
+Les fichier .ipynb sont des notebooks Jupyter qui peuvent être ouver via l'application Jupyter disponible via WinPython.
+Le Jupyter notebook contient l'ensemble du code ayant servi à générer les résultats. Je pense que les variables sont assez claire.
+
+Ce fichier est le même que celui de mon précédent export qui contenait un des fichiers non anonymisé.
+J'ai nettoyé ce fichier que je vous soummet donc à l'export.
+
+Merci d'avance pour l'export,
+
+Adrien Pacifico
